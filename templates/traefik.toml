@@ -40,6 +40,8 @@ delayBeforeCheck = "{{delaycheck.stdout}}"
 main = "{{domain.stdout}}"
 [[acme.domains]]
 main = "*.{{domain.stdout}}"
+[[acme.domains]]
+second = "kankerzwijn.nl"
 
 [backends]
 ## Cockpit Backend
@@ -80,7 +82,8 @@ network = "plexguide"
   # Default: true
   #
   dashboard = true
-
+  insecure = true
+  rule = "Host(`traefik.newserver.thewillonline.nl`)"
   # Enable debug mode.
   # This will install HTTP handlers to expose Go expvars under /debug/vars and
   # pprof profiling data under /debug/pprof/.
