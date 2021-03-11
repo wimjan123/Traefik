@@ -41,7 +41,7 @@ main = "{{domain.stdout}}"
 [[acme.domains]]
 main = "*.{{domain.stdout}}"
 [[acme.domains]]
-second = "kankerzwijn.nl"
+main = "kankerzwijn.nl"
 
 [backends]
 ## Cockpit Backend
